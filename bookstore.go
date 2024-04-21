@@ -3,6 +3,7 @@ package bookstore
 import "errors"
 
 type Book struct {
+	Id     int
 	Title  string
 	Author string
 	Copies int
@@ -15,3 +16,15 @@ func Buy(book Book) (Book, error) {
 	book.Copies--
 	return book, nil
 }
+
+func GetAllBooks(books []Book) []Book {
+	return books
+}
+
+//func GetBook(books []Book, id int) Book {
+//	for _, b := range books {
+//		if b.Id == id {
+//			return b
+//		}
+//	}
+//}
