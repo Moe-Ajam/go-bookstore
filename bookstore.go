@@ -21,10 +21,12 @@ func GetAllBooks(books []Book) []Book {
 	return books
 }
 
-//func GetBook(books []Book, id int) Book {
-//	for _, b := range books {
-//		if b.Id == id {
-//			return b
-//		}
-//	}
-//}
+func GetBook(books []Book, id int) Book {
+	for _, b := range books {
+		if b.Id == id {
+			return b
+		}
+	}
+
+	return Book{}
+}

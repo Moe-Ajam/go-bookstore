@@ -77,9 +77,9 @@ func TestGetBook(t *testing.T) {
 		{Id: 2, Author: "Someone else"},
 	}
 
-	get := bookstore.GetBook(book, 1)
+	get := bookstore.GetBook(book, 2)
 	want := bookstore.Book{
-		Id: 1, Author: "Someone",
+		Id: 2, Author: "Someone else",
 	}
 
 	if !cmp.Equal(get, want) {
